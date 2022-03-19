@@ -10,7 +10,7 @@
 <style>
     body {
         background-color: #1b181f;
-        color :rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
         font-family: Fira code;
     }
 
@@ -19,7 +19,7 @@
         width: 5em;
     }
 
-    li:hover ul {
+    li:hover .sous-menu {
         display: block;
     }
 
@@ -34,17 +34,17 @@
         list-style: none;
     }
 
-    ul {
+    .sous-menu {
         display: none;
         position: absolute;
         left: 6.5em;
     }
 
-    ul:first-of-type {
-        top: -0.7em;
+    ul.sous-menu:first-of-type {
+        top: -1em;
     }
 
-    ul:nth-child(2) {
+    ul.sous-menu:nth-child(2) {
         top: 1em;
     }
 
@@ -59,15 +59,21 @@
     <h1>Le pont mirabeau</h1>
     <div id="menu">
         <li>Home
-            <ul>Accueil</ul>
+            <ul class="sous-menu">
+                <li>Accueil</li>
+            </ul>
         </li>
         <li>Services
-            <ul>Strategy</ul>
-            <ul>Optimization</ul>
+            <ul class="sous-menu">
+                <li>Strategy</li>
+                <li>Optimization</li>
+            </ul>
         </li>
         <li>Publications
-            <ul>Articles</ul>
-            <ul>Tutorials</ul>
+            <ul class="sous-menu">
+                <li>Articles</li>
+                <li>Tutorials</li>
+            </ul>
         </li>
         <li>Events</li>
         <li>Contact</li>
