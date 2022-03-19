@@ -9,12 +9,12 @@
 </head>
 <style>
     body {
-        background-color: #131516;
-        color: white;
+        background-color: #1b181f;
+        color :rgb(255, 255, 255);
+        font-family: Fira code;
     }
 
     #menu {
-        color: floralwhite;
         float: left;
         width: 5em;
     }
@@ -24,30 +24,32 @@
     }
 
     li:hover {
-        background-color: skyblue;
+        background-color: rgb(21, 135, 180);
     }
 
     li {
-        margin: 0;
+        padding: 0.25em 0.25em 0.25em 0.25em;
+        width: 8em;
         position: relative;
+        list-style: none;
     }
 
     ul {
         display: none;
         position: absolute;
-        left: 60px;
+        left: 6.5em;
     }
 
     ul:first-of-type {
-        top: 5px;
+        top: -0.7em;
     }
 
     ul:nth-child(2) {
-        top: 25px;
+        top: 1em;
     }
 
     p {
-        margin-left: 10em;
+        margin-left: 17em;
         padding: 1px 0 1px 5%;
         border-left: 1px solid;
     }
@@ -58,7 +60,6 @@
     <div id="menu">
         <li>Home
             <ul>Accueil</ul>
-            <ul>Onglet pertinent</ul>
         </li>
         <li>Services
             <ul>Strategy</ul>
