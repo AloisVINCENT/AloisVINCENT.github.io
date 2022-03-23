@@ -20,11 +20,35 @@
 
     #menu {
         float: left;
-        width: 5em;
+        width: 20%;
+        flex-direction: column;
+        flex: auto;
+        flex-grow: 4;
+        flex-shrink: 0;
     }
 
-    li:hover .sous-menu {
+    #lorem {
+        width: 50%;
+        flex-direction: column;
+        flex: auto;
+    }
+
+    li:hover>div>ul {
         display: block;
+    }
+
+    li.sous-menu:hover>div>ul {
+        display: block;
+    }
+
+    .sous-sous-menu li {
+        width: 6em;
+        top: -1.5em;
+        left: -0.5em;
+    }
+
+    #menu>li {
+        border-right: 2px solid;
     }
 
     li:hover {
@@ -41,11 +65,17 @@
     .sous-menu {
         display: none;
         position: absolute;
-        left: 6.5em;
+        left: 37%;
+    }
+
+    .sous-sous-menu {
+        display: none;
+        position: absolute;
+        left: 78%;
     }
 
     ul.sous-menu:first-of-type {
-        top: -1em;
+        top: -2.5em;
     }
 
     ul.sous-menu:nth-child(2) {
@@ -53,60 +83,111 @@
     }
 
     p {
-        margin-left: 8.5em;
-        padding: 1px 0 1px 9em;
-        border-left: 1px solid;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+        margin-top: 0;
+        padding-left: 1%;
+    }
+
+    div {
+        position: relative;
+        display: flex;
+    }
+
+    div.sous-flex {
+        width: 200%;
     }
 </style>
 
 <body>
     <h1>Le pont mirabeau</h1>
-    <div id="menu">
-        <li>Home
-            <ul class="sous-menu">
-                <li>Accueil</li>
-            </ul>
-        </li>
-        <li>Services
-            <ul class="sous-menu">
-                <li>Strategy</li>
-                <li>Optimization</li>
-            </ul>
-        </li>
-        <li>Publications
-            <ul class="sous-menu">
-                <li>Articles</li>
-                <li>Tutorials</li>
-            </ul>
-        </li>
-        <li>Events</li>
-        <li>Contact</li>
+    <div id="Flex">
+        <div id="menu">
+            <li>Home
+                <div class="sous-flex">
+                    <ul class="sous-menu">
+                        <li>Accueil</li>
+                    </ul>
+                </div>
+            </li>
+            <li>Services
+                <div class="sous-flex">
+                    <ul class="sous-menu">
+                        <li>Strategy</li>
+                        <li>Optimization
+                            <div class="sous-sous-flex">
+                                <ul class="sous-sous-menu">
+                                    <li>test</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>Publications
+                <div class="sous-flex">
+                    <ul class="sous-menu">
+                        <li>Articles</li>
+                        <li>Tutorials</li>
+                    </ul>
+                </div>
+            </li>
+            <li>Events</li>
+            <li>Contact</li>
+        </div>
+        <div id="Lorem">
+            <p>lorem ipsum Dolor sit amet consectetUr adiPisicing elit. cOmmodi, similique
+                dicta.
+                iNvenTore, recusandae natus!
+                Quos sapiente voluptas, amet totam est nesciunt facilis sit iste libero corrupti! Eius necessitatibus
+                fugit
+                temporibus, quibusdam tempore velit molestiae quasi deleniti odio possimus, aliquam illo quod doloribus
+                quos
+                nesciunt reprehenderit earum asperiores maxime recusandae. Illo accusamus sapiente fuga, nulla voluptas
+                ullam
+                omnis ratione? Pariatur optio beatae, eligendi praesentium officiis dolores alias tempora hic
+                accusantium
+                recusandae totam natus, vero reprehenderit enim sit et consectetur molestiae soluta necessitatibus
+                itaque
+                quasi
+                impedit! Minus officiis natus aperiam fugiat iure necessitatibus maxime voluptas earum possimus
+                praesentium.
+                Quasi ut, laudantium impedit vel sint ea, corporis quo architecto quas, mollitia aliquam voluptate
+                excepturi.
+                Quisquam doloribus itaque saepe soluta odio et pariatur excepturi ut voluptatem mollitia laudantium,
+                modi
+                eaque
+                ipsam blanditiis perspiciatis optio perferendis dolore dignissimos iusto amet consectetur eum
+                repudiandae?
+                Repellat, excepturi consequuntur dolore aliquam nostrum magnam recusandae corporis temporibus nemo
+                itaque a,
+                quis expedita et sint voluptatibus harum mollitia earum delectus! Hic obcaecati dicta beatae officia
+                dolore
+                consequuntur nostrum quod porro, maiores enim incidunt ullam quos officiis iusto voluptas excepturi ab?
+                Suscipit
+                temporibus corporis autem culpa molestias accusantium maiores, alias adipisci! Incidunt repudiandae
+                temporibus
+                nobis dolorem rerum ab sed illum numquam dignissimos fugit neque non, obcaecati laborum quod doloremque
+                error
+                eligendi laboriosam! Ipsa eos quam dolores provident beatae, maiores, delectus dicta accusantium nulla
+                consequuntur qui facilis sit at alias illum esse iure possimus, ab vel magnam quas deserunt! Amet
+                voluptates
+                consectetur dolorem, voluptatem earum aperiam! Iure repellendus esse totam ipsa quaerat saepe architecto
+                nesciunt praesentium qui temporibus eius inventore aliquam molestias, dolore, sapiente magni, facere
+                voluptatibus! Dolorem ad libero aliquam ullam odio accusantium quaerat iure, vero exercitationem
+                suscipit?
+                Reiciendis consequatur maxime magni error placeat aspernatur, quas ipsam sunt minus earum blanditiis.
+                Aliquid in
+                laboriosam vitae expedita debitis corporis error voluptatum doloribus assumenda obcaecati aliquam
+                distinctio
+                veniam corrupti velit iste, dolorum eveniet vero quam tenetur? Commodi distinctio rerum vitae veritatis
+                accusamus itaque illum obcaecati placeat optio ad? Officia atque iure quidem molestias, laboriosam
+                repellendus
+                velit rerum possimus voluptate pariatur nemo vel laborum enim qui? Fuga, deserunt natus?</p>
+        </div>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, similique dicta. Inventore, recusandae natus!
-        Quos sapiente voluptas, amet totam est nesciunt facilis sit iste libero corrupti! Eius necessitatibus fugit
-        temporibus, quibusdam tempore velit molestiae quasi deleniti odio possimus, aliquam illo quod doloribus quos
-        nesciunt reprehenderit earum asperiores maxime recusandae. Illo accusamus sapiente fuga, nulla voluptas ullam
-        omnis ratione? Pariatur optio beatae, eligendi praesentium officiis dolores alias tempora hic accusantium
-        recusandae totam natus, vero reprehenderit enim sit et consectetur molestiae soluta necessitatibus itaque quasi
-        impedit! Minus officiis natus aperiam fugiat iure necessitatibus maxime voluptas earum possimus praesentium.
-        Quasi ut, laudantium impedit vel sint ea, corporis quo architecto quas, mollitia aliquam voluptate excepturi.
-        Quisquam doloribus itaque saepe soluta odio et pariatur excepturi ut voluptatem mollitia laudantium, modi eaque
-        ipsam blanditiis perspiciatis optio perferendis dolore dignissimos iusto amet consectetur eum repudiandae?
-        Repellat, excepturi consequuntur dolore aliquam nostrum magnam recusandae corporis temporibus nemo itaque a,
-        quis expedita et sint voluptatibus harum mollitia earum delectus! Hic obcaecati dicta beatae officia dolore
-        consequuntur nostrum quod porro, maiores enim incidunt ullam quos officiis iusto voluptas excepturi ab? Suscipit
-        temporibus corporis autem culpa molestias accusantium maiores, alias adipisci! Incidunt repudiandae temporibus
-        nobis dolorem rerum ab sed illum numquam dignissimos fugit neque non, obcaecati laborum quod doloremque error
-        eligendi laboriosam! Ipsa eos quam dolores provident beatae, maiores, delectus dicta accusantium nulla
-        consequuntur qui facilis sit at alias illum esse iure possimus, ab vel magnam quas deserunt! Amet voluptates
-        consectetur dolorem, voluptatem earum aperiam! Iure repellendus esse totam ipsa quaerat saepe architecto
-        nesciunt praesentium qui temporibus eius inventore aliquam molestias, dolore, sapiente magni, facere
-        voluptatibus! Dolorem ad libero aliquam ullam odio accusantium quaerat iure, vero exercitationem suscipit?
-        Reiciendis consequatur maxime magni error placeat aspernatur, quas ipsam sunt minus earum blanditiis. Aliquid in
-        laboriosam vitae expedita debitis corporis error voluptatum doloribus assumenda obcaecati aliquam distinctio
-        veniam corrupti velit iste, dolorum eveniet vero quam tenetur? Commodi distinctio rerum vitae veritatis
-        accusamus itaque illum obcaecati placeat optio ad? Officia atque iure quidem molestias, laboriosam repellendus
-        velit rerum possimus voluptate pariatur nemo vel laborum enim qui? Fuga, deserunt natus?</p>
 </body>
 
 </html>
